@@ -1,0 +1,163 @@
+<style>
+.featured_image .button_holder
+{
+	border-width:1px;
+	border-style:solid;
+	padding:3px 6px;
+	float:left;
+}
+
+
+</style>
+
+  <div id="header" >
+    <div class="fadeWrapper">
+      <div class="wrapper">
+        <ul class="wrapper">
+          <li>
+			<% @male_profile.profile_images.each do |image|%>
+			<div class="imageHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %>
+              <div class="imgInfo">
+                <h3> <%= image.caption %></h3>
+                </p> <%= image.caption %> </p> </div>
+              <div class="black"></div>
+            </div>
+          </li>
+          <li>
+		 <% end %>   
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="topText">
+    <div class="hr3"><hr /></div>
+    <p> One Date A Day.  Enjoy them while you can.  </p>
+	    <div class="hr4"><hr /></div>
+  </div>
+  <div id="contentContainer">
+    <!--content
+    <div id="content">
+      <h1>Welcome to The Paper Core Site Template</h1>
+      <p>Vivamus sit amet odio pellentesque odio faucibus tristique. Morbi facilisis, ligula a faucibus pellentesque, orci justo consequat massa, sit amet dapibus dolor diam viverra mi. Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.Vivamus sit amet odio pellentesque odio faucibus tristique. Morbi facilisis, ligula a faucibus pellentesque, orci justo consequat massa, sit amet dapibus dolor diam viverra mi. Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
+      <br />
+		 <div class="featuredTitleContainer"><div class="hr1"><hr /></div>Our Services<div class="hr2"><hr /></div></div>
+      <br/>
+      <div class="servicesBoxs">
+        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
+          <h2>Business Planning</h2>
+          <p>Vivamus sit amet odio pellentesque odio
+            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
+            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
+            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
+        </div>
+        <div class="hr5"><hr /></div>
+        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
+          <h2>Market Research</h2>
+          <p>Vivamus sit amet odio pellentesque odio
+            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
+            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
+            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
+        </div>
+    <div class="hr5"><hr /></div>
+        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
+          <h2>Target Marketing</h2>
+          <p>Vivamus sit amet odio pellentesque odio
+            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
+            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
+            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
+        </div>
+       <div class="hr5"><hr /></div>
+      </div>
+    </div>
+
+
+
+
+	 
+    <div id="sidebar">
+      <div class="sidebarBox">
+        <div class="sidebarTitile">
+          <h2> Latest News</h2>
+        </div>
+        <div class="sidebarMenu">
+          <h4><a href="#">Call to Action Buttons: Examples and Best Practices</a></h4>
+          <span class="info"><a href="#">July 1, 2009 </a></span>
+          <div class="bubble"></div>
+          <span class="info"><a href="#">12 Comments </a></span>
+          <hr />
+          <h4><a href="#">Setting Up Photoshop For Web, App and iPhone Development</a></h4>
+          <span class="info"><a href="#">June 22, 2009 </a></span>
+          <div class="bubble"></div>
+          <span class="info"><a href="#">3 Comments </a></span>
+          <hr />
+          <h4><a href="#">Call to Action Buttons: Examples and Best Practices</a></h4>
+          <span class="info"><a href="#">June 18, 2009 </a></span>
+          <div class="bubble"></div>
+          <span class="info"><a href="#">7 Comments </a></span>
+          <hr />
+        </div>
+        <div class="sidebarTitile">
+          <h2>Categories</h2>
+        </div>
+        <div class="sidebarMenu">
+          <ul>
+            <li><a href="#">Portfolio Tips</a>
+              <hr/>
+            </li>
+            <li><a href="#">Job Search</a>
+              <hr/>
+            </li>
+            <li><a href="#">Category Name</a>
+              <hr/>
+            </li>
+            <li><a href="#">Category Name</a>
+              <hr/>
+            </li>
+            <li><a href="#">Category Name</a>
+              <hr/>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+	<div id="featured_male_profile" class="featured_image center">
+		<div class="profile_picture">
+		<%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %>
+
+		<div class="button_holder">
+		<%= link_to image_tag("twitter-bird3-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.twitter, :class => 'twitter_button left'%> <br/>
+		<%= link_to image_tag("myspace-logo-square2-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.myspace_url, :class => 'myspace_button left'%> <br/>
+		<%= link_to image_tag("facebook-logo-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.facebook_url, :class => 'myspace_button left'%><br/>
+
+		</div>
+		</div>
+	</div>
+
+	<div id="featured_female_profile" class="featured_image right">
+		<div id = "female_profile_picture" class="left">
+		<%= image_tag @female_profile.profile_images[0].photo.url%>
+
+		</div>
+		<div class="button_holder left">
+
+		</div>
+	</div>
+	-->
+	<div id="info_dialog" title="<%= @male_profile.first_name %> <%= @male_profile.last_name%>">
+	<ul>
+	<li>Name: <%= @male_profile.first_name %> <%= @male_profile.last_name%></li>	
+	<li>Birthday: <%= @male_profile.birth_date %></li>
+	<li>About: <%= @male_profile.about_me%> </li>
+	<li>Hair: <%= @male_profile.hair_color%></li>
+	<li>Eyes: <%= @male_profile.eye_color%></li>
+	<li>Height: <%= @male_profile.height%></li>
+	</ul>
+	</div>
+	
+
+
+</div>

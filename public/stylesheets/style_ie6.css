@@ -1,0 +1,94 @@
+#lineTop{
+display:block;
+height:2px;
+margin:0px;
+padding:0px;
+font-size:2px;
+
+}
+
+#menu{
+	height:15px;
+	margin:auto;
+	padding-top:20px;
+}﻿
+
+#sidebar{
+	width:280px;
+	height:100%;
+	float:right;
+}
+
+.sidebarBox{
+	width:280px;
+	margin-left:8px;
+
+}
+
+.sidebarTitile{
+	width:357px;
+	height:30px;
+	background-repeat:no-repeat;
+	text-align:center;
+	position:relative;
+	left:22px;
+}
+
+.sidebarMenu hr{
+	width:310px;
+	color:#f2f2f2;
+}﻿
+
+
+span.info, span.info a{
+	float:left;
+}
+
+.bubble{
+	float:left;
+	top:15px;
+}
+
+#menuContainer,#menu, #navigationContainer{
+	position:relative;
+	z-index:2;
+}
+
+#menu ul li ul{
+	 top:44px;  
+}
+
+
+.postBox{
+	height:200px;
+}
+
+.postBox .info{
+	height:80px;
+}
+
+.postBoxs hr{
+	margin-top:0px;
+}
+
+#portfolio{
+	margin-left:-30px;
+	width:1005px;
+}
+
+#portfolioCategories{
+	margin-left:30px;
+}
+
+.servicesBoxs{
+margin-top:25px;
+}
+
+.servicesBox{
+margin-top:30px;
+margin-bottom:30px;
+}
+
+#navButtons{
+	margin-top:30px;
+}

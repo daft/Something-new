@@ -1,0 +1,38 @@
+.sidebarMenu hr{
+	width:310px;
+	color:#f2f2f2;
+}﻿
+
+span.info, span.info a{
+	float:left;
+}
+
+.bubble{
+	float:left;
+	top:15px;
+}
+
+.month{
+	top:11px;
+}
+
+#menuContainer,#menu, #navigationContainer{
+	position:relative;
+	z-index:2;
+}
+
+#menu ul li ul{
+	 top:41px;  
+}
+
+#menu ul li ul li a {
+	padding-bottom:0px;
+}
+
+.postBoxs hr{
+	margin-top:0px;
+}
+
+#navButtons{
+margin-top:30px;
+}
