@@ -26,7 +26,7 @@ class DaterProfile < ActiveRecord::Base
     
         product_ids = self.all(
           :select => "id",
-          :conditions => ['!listed && sex=?',"M"]
+          :conditions => ['!listed AND sex=?',"M"]
         )
 
         next_product = self.find(product_ids[rand(product_ids.length)])        
@@ -41,7 +41,7 @@ class DaterProfile < ActiveRecord::Base
     
         product_ids = self.all(
           :select => "id",
-          :conditions => ['!listed && sex=?',"F"]
+          :conditions => ['!listed AND sex=?',"F"]
         )
 
         next_product = self.find(product_ids[rand(product_ids.length)])        
