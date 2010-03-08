@@ -12,11 +12,11 @@ class DaterProfile < ActiveRecord::Base
   end 
 
   def self.male_profile_of_the_day
-    self.find(:first, :conditions=>["profile_of_the_day && sex=?","M"])
+    self.find(:first, :conditions=>["profile_of_the_day AND sex=?","M"])
   end
   
   def self.female_profile_of_the_day
-    self.find(:first, :conditions=>["profile_of_the_day && sex=?","F"])
+    self.find(:first, :conditions=>["profile_of_the_day AND sex=?","F"])
   end
   
   def self.setup_male_profile_of_the_day
