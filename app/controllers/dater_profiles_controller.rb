@@ -1,5 +1,5 @@
 class DaterProfilesController < ApplicationController
-  before_filter :require_user
+  before_filter :require_user, :only => [:new, :create]
   
   
   def new
@@ -17,6 +17,8 @@ class DaterProfilesController < ApplicationController
       render :action => 'new'
     end
   end
+
+
 
 
   

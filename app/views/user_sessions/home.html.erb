@@ -10,112 +10,65 @@
 
 </style>
 
+<%= javascript_include_tag 'fader' %>
   <div id="header" >
-    <div class="fadeWrapper">
-      <div class="wrapper">
-        <ul class="wrapper">
-          <li>
+    <div class="wrapper">	
+	<div class="fadeWrapper">
+     		<a id="inline_fancybox" href="#info_dialog">
 			<% @male_profile.profile_images.each do |image|%>
-			<div class="imageHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %>
-              <div class="imgInfo">
-                <h3> <%= image.caption %></h3>
-                </p> <%= image.caption %> </p> </div>
-              <div class="black"></div>
-            </div>
-          </li>
-          <li>
-		 <% end %>   
-        </ul>
+			<div class="fadeHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %> </div>
+		 	<% end %>   
+       		</a>
       </div>
     </div>
   </div>
-  <div id="topText">
-    <div class="hr3"><hr /></div>
-    <p> One Date A Day.  Enjoy them while you can.  </p>
-	    <div class="hr4"><hr /></div>
-  </div>
+
   <div id="contentContainer">
-    <!--content
+    
     <div id="content">
-      <h1>Welcome to The Paper Core Site Template</h1>
-      <p>Vivamus sit amet odio pellentesque odio faucibus tristique. Morbi facilisis, ligula a faucibus pellentesque, orci justo consequat massa, sit amet dapibus dolor diam viverra mi. Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.Vivamus sit amet odio pellentesque odio faucibus tristique. Morbi facilisis, ligula a faucibus pellentesque, orci justo consequat massa, sit amet dapibus dolor diam viverra mi. Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
-      <br />
-		 <div class="featuredTitleContainer"><div class="hr1"><hr /></div>Our Services<div class="hr2"><hr /></div></div>
+	
+		
+		<div class="featuredTitleContainer"><div class="hr1"><hr /></div>About Us<div class="hr2"><hr /></div></div>
       <br/>
+      <p>  ODD is the simplest dating site out here.  Each day we display a profile of ONE member of each sex. There will be some pictures, a little info, and maybe a blurb.  
+      <br /><br/>
+
+
+	  <div class="featuredTitleContainer"><div class="hr1"><hr /></div>How it works<div class="hr2"><hr /></div></div>
+      <br/>
+	  If you like our dater of the day, click the email button, and you will be able to send them an email.  We do believe in the privacy and our Creeper Protection Department has developed a system whereby each dater is assigned an anonymous email.  When we receive email at that address, we will forward it on to our date-of-the-day for exactly one week.  After that, you blew it or s/he doesn't like the sound of you.  Don't worry though, there will be another willing dater tomorrow, and the next day.   </p>
+	<br/>
       <div class="servicesBoxs">
-        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
-          <h2>Business Planning</h2>
-          <p>Vivamus sit amet odio pellentesque odio
-            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
-            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
-            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
-        </div>
-        <div class="hr5"><hr /></div>
-        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
-          <h2>Market Research</h2>
-          <p>Vivamus sit amet odio pellentesque odio
-            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
-            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
-            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
-        </div>
-    <div class="hr5"><hr /></div>
-        <div class="servicesBox"> <img src="images/img.jpg" alt="" class="servicesImg" />
-          <h2>Target Marketing</h2>
-          <p>Vivamus sit amet odio pellentesque odio
-            faucibus tristique. Morbi facilisis, ligula a faucibus pellen,
-            orci justo consequat massa, sit amet dapibus dolor diam viverra mi.
-            Aenean porttitor, lectus at dapibus egestas, tellus ipsum rhoncus orci, eu vestibulum nisi orci quis nunc.</p>
-        </div>
-       <div class="hr5"><hr /></div>
+
       </div>
     </div>
 
 
 
 
-	 
+
+	
     <div id="sidebar">
       <div class="sidebarBox">
         <div class="sidebarTitile">
-          <h2> Latest News</h2>
+          <h2> Recent Daters </h2>
         </div>
-        <div class="sidebarMenu">
-          <h4><a href="#">Call to Action Buttons: Examples and Best Practices</a></h4>
-          <span class="info"><a href="#">July 1, 2009 </a></span>
+        <div class="sidebarMenu" id="sidebarRecent">
+		  <% @recent_daters.each do |dater|%>
+		  <div class="recent_photo"><%= image_tag dater.profile_images[0].photo.url(:small) %></div>
+          <h4><a href="#"><%= dater.first_name%> <%= dater.last_name%></a></h4>
+          <span class="info"><a href="#"> <%= dater.updated_at.strftime('%d %b %Y') %> </a></span>
           <div class="bubble"></div>
           <span class="info"><a href="#">12 Comments </a></span>
           <hr />
-          <h4><a href="#">Setting Up Photoshop For Web, App and iPhone Development</a></h4>
-          <span class="info"><a href="#">June 22, 2009 </a></span>
-          <div class="bubble"></div>
-          <span class="info"><a href="#">3 Comments </a></span>
-          <hr />
-          <h4><a href="#">Call to Action Buttons: Examples and Best Practices</a></h4>
-          <span class="info"><a href="#">June 18, 2009 </a></span>
-          <div class="bubble"></div>
-          <span class="info"><a href="#">7 Comments </a></span>
-          <hr />
+		 <% end %>
         </div>
         <div class="sidebarTitile">
-          <h2>Categories</h2>
+          <h2>Buzz</h2>
         </div>
-        <div class="sidebarMenu">
+        <div class="sidebarMenu" id="sidebarBuzz">
           <ul>
-            <li><a href="#">Portfolio Tips</a>
-              <hr/>
-            </li>
-            <li><a href="#">Job Search</a>
-              <hr/>
-            </li>
-            <li><a href="#">Category Name</a>
-              <hr/>
-            </li>
-            <li><a href="#">Category Name</a>
-              <hr/>
-            </li>
-            <li><a href="#">Category Name</a>
-              <hr/>
-            </li>
+				
           </ul>
         </div>
       </div>
@@ -123,7 +76,7 @@
   </div>
 </div>
 
-	
+	<!--
 	<div id="featured_male_profile" class="featured_image center">
 		<div class="profile_picture">
 		<%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %>
@@ -147,17 +100,54 @@
 		</div>
 	</div>
 	-->
-	<div id="info_dialog" title="<%= @male_profile.first_name %> <%= @male_profile.last_name%>">
-	<ul>
-	<li>Name: <%= @male_profile.first_name %> <%= @male_profile.last_name%></li>	
-	<li>Birthday: <%= @male_profile.birth_date %></li>
-	<li>About: <%= @male_profile.about_me%> </li>
-	<li>Hair: <%= @male_profile.hair_color%></li>
-	<li>Eyes: <%= @male_profile.eye_color%></li>
-	<li>Height: <%= @male_profile.height%></li>
-	</ul>
+		<div style="display:none">
+		
+		<div id="info_dialog">
+		<div class="info_dialog_photo">
+			<%= image_tag @male_profile.profile_images[0].photo.url(:small) %>
+		</div>
+		<div class="info_dialog_text">
+			<p>Name: <%= @male_profile.first_name %> <%= @male_profile.last_name%></p>	
+			<p>Birthday: <%= @male_profile.birth_date %></p>
+			<p>About: <%= @male_profile.about_me%> </p>
+			<p>Hair: <%= @male_profile.hair_color%></p>
+			<p>Eyes: <%= @male_profile.eye_color%></p>
+			<p>Height: <%= @male_profile.height%></p>
+		</div>
+		</div>
 	</div>
+	<script>
+	$(document).ready(function() {
+	    var twurl = 'http://search.twitter.com/search.json';
+	    $.ajaxSetup({ cache: true });
+	    $.getJSON(
+	        twurl + '?callback=?&rpp=5&q=OneDateDaily',
+	        function(data) {
+	            $.each(data.results, function(i, tweet) {
+	                if (tweet.text !== undefined) {
+	                    var date_tweet = new Date(tweet.created_at);
+	                    var date_now = new Date();
+	                    var date_diff = date_now - date_tweet;
+						var fromTweeter = tweet.from_user;
+	                    var hours = Math.round(date_diff/(1000*60*60));
+	                    var tweet_html = '<li>';
+	                    tweet_html += '<a href="http://www.twitter.com/';
+	                    tweet_html += fromTweeter +'/status/' +tweet.id +'">';
+	                    tweet_html += tweet.text + '</a></div>';
+	                    tweet_html += '<span class="info">' + tweet.from_user + ' - ' + hours;
+	                    tweet_html += ' hours ago</span><hr/></li>';
+	                    $('#sidebarBuzz ul').append(tweet_html);
+	                }
+	            });
+	        }
+	    );
 	
+
+	
+	});
+	
+	</script>
 
 
 </div>
+

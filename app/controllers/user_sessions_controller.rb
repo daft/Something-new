@@ -9,6 +9,7 @@ class UserSessionsController < ApplicationController
     def home
        @male_profile = male_featured_profile
        @female_profile = female_featured_profile
+       @recent_daters = DaterProfile.most_recent_daters
     end
 
     def create
