@@ -22053,3 +22053,1229 @@ ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" wit
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (18.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 17:04:29) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (27.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (16.8ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (16.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 430ms (View: 280, DB: 85) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 17:04:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 17:07:56) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 36, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 17:08:05) [GET]
+
+ActionController::RoutingError (No route matches "/index.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 17:08:10) [GET]
+
+ActionController::RoutingError (No route matches "/services.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 17:08:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:13:48) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 55ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:13:48) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 49ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:14:14) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 55ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:14:14) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 47ms (View: 35, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:17:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 56ms (View: 44, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:18:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.6ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 108ms (View: 95, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:18:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 50ms (View: 38, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:19:02) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 60ms (View: 47, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:19:02) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.6ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 105ms (View: 93, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:19:21) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.5ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 55ms (View: 43, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:19:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 45, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:19:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 46ms (View: 35, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:22:04) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.6ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.7ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 45, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:22:48) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 44, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:27:09) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 45, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:27:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.8ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 62ms (View: 49, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:27:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.6ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 50ms (View: 36, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 18:27:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/sidebar_title.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 18:28:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/sidebar_title.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:29:01) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 53ms (View: 41, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:29:38) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.8ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 60ms (View: 47, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:29:51) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.6ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.5ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 48, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:30:38) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.6ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 110ms (View: 97, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:30:57) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (12.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 70ms (View: 46, DB: 18) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:32:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 60ms (View: 47, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:33:55) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+ERROR: compiling _run_erb_app47views47user_sessions47home46html46erb RAISED compile error
+/Users/Dumbledore/dev/dateaday/app/views/user_sessions/home.html.erb:27: syntax error, unexpected ':', expecting ')'
+...mage_tag 'sidebar_title.png' :size=>"100x55" ).to_s); @outpu...
+                              ^
+Function body:           def _run_erb_app47views47user_sessions47home46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<style>\n"
+@output_buffer.concat ".featured_image .button_holder\n"
+@output_buffer.concat "{\n"
+@output_buffer.concat "\tborder-width:1px;\n"
+@output_buffer.concat "\tborder-style:solid;\n"
+@output_buffer.concat "\tpadding:3px 6px;\n"
+@output_buffer.concat "\tfloat:left;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "div.wrapper\n"
+@output_buffer.concat "{\n"
+@output_buffer.concat "\twidth:954px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</style>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( javascript_include_tag 'fader' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  <div id=\"header\" >\n"
+@output_buffer.concat "    <div class=\"wrapper\">\t\n"
+@output_buffer.concat "\t<div class=\"fadeWrapper\">\n"
+@output_buffer.concat "     \t\t<a id=\"inline_fancybox\" href=\"#info_dialog\">\n"
+@output_buffer.concat "\t\t\t";  @male_profile.profile_images.each do |image|; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t<div class=\"fadeHolder\"> "; @output_buffer.concat(( image_tag image.photo.url(:large), :id=>"male_profile_image" ).to_s); @output_buffer.concat " </div>\n"
+@output_buffer.concat "\t\t \t";  end ; @output_buffer.concat "   \n"
+@output_buffer.concat "\t\t<span style=\"float:left\">"; @output_buffer.concat(( image_tag 'sidebar_title.png' :size=>"100x55" ).to_s); @output_buffer.concat "</span>\n"
+@output_buffer.concat "       \t\t</a>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "  <div id=\"contentContainer\">\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    <div id=\"content\">\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t<div class=\"featuredTitleContainer\"><div class=\"hr1\"><hr /></div>About Us<div class=\"hr2\"><hr /></div></div>\n"
+@output_buffer.concat "      <br/>\n"
+@output_buffer.concat "      <p>  ODD is the simplest dating site out here.  Each day we display a profile of ONE member of each sex. There will be some pictures, a little info, and maybe a blurb.  \n"
+@output_buffer.concat "      <br /><br/>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t  <div class=\"featuredTitleContainer\"><div class=\"hr1\"><hr /></div>How it works<div class=\"hr2\"><hr /></div></div>\n"
+@output_buffer.concat "      <br/>\n"
+@output_buffer.concat "\t  If you like our dater of the day, click the email button, and you will be able to send them an email.  We do believe in the privacy and our Creeper Protection Department has developed a system whereby each dater is assigned an anonymous email.  When we receive email at that address, we will forward it on to our date-of-the-day for exactly one week.  After that, you blew it or s/he doesn't like the sound of you.  Don't worry though, there will be another willing dater tomorrow, and the next day.   </p>\n"
+@output_buffer.concat "\t<br/>\n"
+@output_buffer.concat "      <div class=\"servicesBoxs\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "    <div id=\"sidebar\">\n"
+@output_buffer.concat "      <div class=\"sidebarBox\">\n"
+@output_buffer.concat "        <div class=\"sidebarTitile\">\n"
+@output_buffer.concat "          <h2> Recent Daters </h2>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        <div class=\"sidebarMenu\" id=\"sidebarRecent\">\n"
+@output_buffer.concat "\t\t  ";  @recent_daters.each do |dater|; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t  <div class=\"recent_photo\">"; @output_buffer.concat(( image_tag dater.profile_images[0].photo.url(:small) ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "          <h4><a href=\"#\">"; @output_buffer.concat(( dater.first_name).to_s); @output_buffer.concat " "; @output_buffer.concat(( dater.last_name).to_s); @output_buffer.concat "</a></h4>\n"
+@output_buffer.concat "          <span class=\"info\"><a href=\"#\"> "; @output_buffer.concat(( dater.updated_at.strftime('%d %b %Y') ).to_s); @output_buffer.concat " </a></span>\n"
+@output_buffer.concat "          <div class=\"bubble\"></div>\n"
+@output_buffer.concat "          <span class=\"info\"><a href=\"#\">12 Comments </a></span>\n"
+@output_buffer.concat "          <hr />\n"
+@output_buffer.concat "\t\t ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        <div class=\"sidebarTitile\">\n"
+@output_buffer.concat "          <h2>Buzz</h2>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "        <div class=\"sidebarMenu\" id=\"sidebarBuzz\">\n"
+@output_buffer.concat "          <ul>\n"
+@output_buffer.concat "\t\t\t\t\n"
+@output_buffer.concat "          </ul>\n"
+@output_buffer.concat "        </div>\n"
+@output_buffer.concat "      </div>\n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "  </div>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<!--\n"
+@output_buffer.concat "\t<div id=\"featured_male_profile\" class=\"featured_image center\">\n"
+@output_buffer.concat "\t\t<div class=\"profile_picture\">\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t<div class=\"button_holder\">\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( link_to image_tag("twitter-bird3-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.twitter, :class => 'twitter_button left').to_s); @output_buffer.concat " <br/>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( link_to image_tag("myspace-logo-square2-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.myspace_url, :class => 'myspace_button left').to_s); @output_buffer.concat " <br/>\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( link_to image_tag("facebook-logo-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.facebook_url, :class => 'myspace_button left').to_s); @output_buffer.concat "<br/>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"featured_female_profile\" class=\"featured_image right\">\n"
+@output_buffer.concat "\t\t<div id = \"female_profile_picture\" class=\"left\">\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( image_tag @female_profile.profile_images[0].photo.url).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t<div class=\"button_holder left\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\t-->\n"
+@output_buffer.concat "\t\t<div style=\"display:none\">\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t<div id=\"info_dialog\">\n"
+@output_buffer.concat "\t\t<div class=\"info_dialog_photo\">\n"
+@output_buffer.concat "\t\t\t"; @output_buffer.concat(( image_tag @male_profile.profile_images[0].photo.url(:small) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t<div class=\"info_dialog_text\">\n"
+@output_buffer.concat "\t\t\t<p>Name: "; @output_buffer.concat(( @male_profile.first_name ).to_s); @output_buffer.concat " "; @output_buffer.concat(( @male_profile.last_name).to_s); @output_buffer.concat "</p>\t\n"
+@output_buffer.concat "\t\t\t<p>Birthday: "; @output_buffer.concat(( @male_profile.birth_date ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\t\t\t<p>About: "; @output_buffer.concat(( @male_profile.about_me).to_s); @output_buffer.concat " </p>\n"
+@output_buffer.concat "\t\t\t<p>Hair: "; @output_buffer.concat(( @male_profile.hair_color).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\t\t\t<p>Eyes: "; @output_buffer.concat(( @male_profile.eye_color).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\t\t\t<p>Height: "; @output_buffer.concat(( @male_profile.height).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<script>\n"
+@output_buffer.concat "\t$(document).ready(function() {\n"
+@output_buffer.concat "\t    var twurl = 'http://search.twitter.com/search.json';\n"
+@output_buffer.concat "\t    $.ajaxSetup({ cache: true });\n"
+@output_buffer.concat "\t    $.getJSON(\n"
+@output_buffer.concat "\t        twurl + '?callback=?&rpp=5&q=OneDateDaily',\n"
+@output_buffer.concat "\t        function(data) {\n"
+@output_buffer.concat "\t            $.each(data.results, function(i, tweet) {\n"
+@output_buffer.concat "\t                if (tweet.text !== undefined) {\n"
+@output_buffer.concat "\t                    var date_tweet = new Date(tweet.created_at);\n"
+@output_buffer.concat "\t                    var date_now = new Date();\n"
+@output_buffer.concat "\t                    var date_diff = date_now - date_tweet;\n"
+@output_buffer.concat "\t\t\t\t\t\tvar fromTweeter = tweet.from_user;\n"
+@output_buffer.concat "\t                    var hours = Math.round(date_diff/(1000*60*60));\n"
+@output_buffer.concat "\t                    var tweet_html = '<li>';\n"
+@output_buffer.concat "\t                    tweet_html += '<a href=\"http://www.twitter.com/';\n"
+@output_buffer.concat "\t                    tweet_html += fromTweeter +'/status/' +tweet.id +'\">';\n"
+@output_buffer.concat "\t                    tweet_html += tweet.text + '</a></div>';\n"
+@output_buffer.concat "\t                    tweet_html += '<span class=\"info\">' + tweet.from_user + ' - ' + hours;\n"
+@output_buffer.concat "\t                    tweet_html += ' hours ago</span><hr/></li>';\n"
+@output_buffer.concat "\t                    $('#sidebarBuzz ul').append(tweet_html);\n"
+@output_buffer.concat "\t                }\n"
+@output_buffer.concat "\t            });\n"
+@output_buffer.concat "\t        }\n"
+@output_buffer.concat "\t    );\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t});\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</script>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Dumbledore/dev/dateaday/app/views/user_sessions/home.html.erb:164:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Dumbledore/dev/dateaday/app/views/user_sessions/home.html.erb:27: syntax error, unexpected ':', expecting ')'
+...mage_tag 'sidebar_title.png' :size=>"100x55" ).to_s); @outpu...
+                              ^) on line #27 of app/views/user_sessions/home.html.erb:
+24: 			<% @male_profile.profile_images.each do |image|%>
+25: 			<div class="fadeHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %> </div>
+26: 		 	<% end %>   
+27: 		<span style="float:left"><%= image_tag 'sidebar_title.png' :size=>"100x55" %></span>
+28:        		</a>
+29:       </div>
+30:     </div>
+
+    app/views/user_sessions/home.html.erb:164:in `compile!'
+
+Rendered rescues/_trace (78.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:34:04) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 45, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:34:29) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 112ms (View: 99, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:34:30) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 48ms (View: 36, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:34:56) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (10.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 123ms (View: 101, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:34:57) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 51ms (View: 38, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:35:06) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 58ms (View: 45, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:35:06) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 52ms (View: 39, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:35:18) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 59ms (View: 46, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:35:35) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (1.1ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 49, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:37:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 108ms (View: 96, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:38:07) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 56ms (View: 44, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:38:24) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 55ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 18:42:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-10 18:42:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 68ms (View: 57, DB: 2) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 18:45:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:45:27) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 44, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-03-10 18:46:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/dater_profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-10 18:46:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 22ms (View: 10, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:51:58) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 53ms (View: 41, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:55:31) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 53ms (View: 41, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-03-10 18:55:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"privacy", "controller"=>"static_pages"}
+Rendering template within layouts/application
+Rendering static_pages/privacy
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 21ms (View: 18, DB: 1) | 200 OK [http://localhost/privacy]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 18:55:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-03-10 18:57:41) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 52ms (View: 40, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-03-10 18:57:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"contact_us", "controller"=>"static_pages"}
+Rendering template within layouts/application
+Rendering static_pages/contact_us
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 21ms (View: 18, DB: 1) | 200 OK [http://localhost/contact_us]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-03-10 18:59:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"contact_us", "controller"=>"static_pages"}
+Rendering template within layouts/application
+Rendering static_pages/contact_us
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 23ms (View: 19, DB: 2) | 200 OK [http://localhost/contact_us]

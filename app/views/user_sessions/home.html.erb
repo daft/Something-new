@@ -7,8 +7,14 @@
 	float:left;
 }
 
+div.wrapper
+{
+	width:954px;
+}
 
 </style>
+
+    
 
 <%= javascript_include_tag 'fader' %>
   <div id="header" >
@@ -18,11 +24,12 @@
 			<% @male_profile.profile_images.each do |image|%>
 			<div class="fadeHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %> </div>
 		 	<% end %>   
+		
        		</a>
       </div>
     </div>
   </div>
-
+	
   <div id="contentContainer">
     
     <div id="content">
@@ -115,7 +122,7 @@
 			<p>Height: <%= @male_profile.height%></p>
 		</div>
 		</div>
-	</div>
+
 	<script>
 	$(document).ready(function() {
 	    var twurl = 'http://search.twitter.com/search.json';

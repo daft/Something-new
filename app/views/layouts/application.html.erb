@@ -34,7 +34,12 @@
 	        <ul class="sf-menu">
 	          <li class="selected"> <%= link_to "Home", root_path %> </li>				
 		         <li><%= link_to "Add Yourself!", new_dater_profile_path %></li>
-	          
+	          	 	<li><a href="#">Todays Daters</a>
+			              <ul>
+			                <li><a href="#"> Male</a></li>
+			                <li><a href="#"> Female </a></li>
+			              </ul>
+			          </li>
 			  <% if !current_user %>
 				  <li><%= link_to "Register", new_account_path %> </li> 
 				  <li><%= link_to "Log In", new_user_session_path %> </li>
@@ -44,9 +49,9 @@
 				<% end %>
 	          	<li><a href="services.html">Help</a>
 		              <ul>
-		                <li><a href="#"> Contact Us</a></li>
-		                <li><a href="#"> About </a></li>
-		                <li><a href="#"> List Me! </a></li>
+		                <li><%= link_to "Contact Us", contact_us_path %></li>
+		                <li><%= link_to "About", about_path %></li>
+		                <li><%= link_to "Privacy", privacy_path %></li>
 		              </ul>
 		          </li>
 	        </ul>
@@ -56,15 +61,23 @@
 	    </div>
 	    <!--End Navigation-->
 
-		
+		<p style="color: green"><%= flash[:notice] %></p>
 
 		<%= yield %>
+		<div id="footer">
+		    <div class="center">
+		      <p>This site is the property of OneDateDaily</p>
+		      <div id="footerMenu">
+		        <ul>
+		          <li><a href="index.html">Home</a>&nbsp; </li>
+		          <li><a href="index2.html">Privacy</a>&nbsp;</li>
+				  <li><a href="index2.html">Terms and Conditions</a>&nbsp;</li>
+		          <li><a href="index2.html">About</a>&nbsp;</li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+	
+		</body>
+		</html>
 
-</body>
-
- 
-<p style="color: green"><%= flash[:notice] %></p>
-
- 
-</body>
-</html>
