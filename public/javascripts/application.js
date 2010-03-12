@@ -12,6 +12,8 @@ $(document).ready(function() {
 		'hideOnOverlayClick' : 'false'
 	});
 	
+	$('#female_icon').click(function(){$('#male_photo_holder').hide(); $('#female_photo_holder').fadeIn();})
+	$('#male_icon').click(function(){$('#female_photo_holder').hide(); $('#male_photo_holder').fadeIn();})
 	
 	
 });

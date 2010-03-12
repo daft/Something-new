@@ -34,12 +34,7 @@
 	        <ul class="sf-menu">
 	          <li class="selected"> <%= link_to "Home", root_path %> </li>				
 		         <li><%= link_to "Add Yourself!", new_dater_profile_path %></li>
-	          	 	<li><a href="#">Todays Daters</a>
-			              <ul>
-			                <li><a href="#"> Male</a></li>
-			                <li><a href="#"> Female </a></li>
-			              </ul>
-			          </li>
+	          	 	
 			  <% if !current_user %>
 				  <li><%= link_to "Register", new_account_path %> </li> 
 				  <li><%= link_to "Log In", new_user_session_path %> </li>

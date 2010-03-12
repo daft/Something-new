@@ -16,16 +16,26 @@ div.wrapper
 
     
 
-<%= javascript_include_tag 'fader' %>
+
   <div id="header" >
+	 <%= image_tag 'male-icon.png', :id=>"male_icon", :size=>"20x20" %> | <%= image_tag 'female-icon.png', :id=>"female_icon",  :size=>"20x20" %> 
     <div class="wrapper">	
 	<div class="fadeWrapper">
-     		<a id="inline_fancybox" href="#info_dialog">
-			<% @male_profile.profile_images.each do |image|%>
-			<div class="fadeHolder"> <%= image_tag image.photo.url(:large), :id=>"male_profile_image" %> </div>
-		 	<% end %>   
-		
-       		</a>
+			<div id="male_photo_holder">
+     		<a id="inline_fancybox" href="#male_info_dialog">
+			
+			<div class="fadeHolder"> <%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %> </div>
+ 
+			</a>
+			</div>
+			
+			<div id="female_photo_holder" style="display:none">
+				<a id="inline_fancybox" href="#female_info_dialog">
+				
+				<div class="fadeHolder"> <%= image_tag @female_profile.profile_images[0].photo.url(:large), :id=>"female_profile_image" %> </div>
+			 	
+				</a>
+			</div>
       </div>
     </div>
   </div>
@@ -83,33 +93,26 @@ div.wrapper
   </div>
 </div>
 
-	<!--
-	<div id="featured_male_profile" class="featured_image center">
-		<div class="profile_picture">
-		<%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %>
+<div style="display:none">
 
-		<div class="button_holder">
-		<%= link_to image_tag("twitter-bird3-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.twitter, :class => 'twitter_button left'%> <br/>
-		<%= link_to image_tag("myspace-logo-square2-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.myspace_url, :class => 'myspace_button left'%> <br/>
-		<%= link_to image_tag("facebook-logo-square-webtreatsetc.png", :size =>'35x35',:border=>0), @male_profile.facebook_url, :class => 'myspace_button left'%><br/>
+<div id="female_info_dialog">
+<div class="info_dialog_photo">
+	<%= image_tag @female_profile.profile_images[0].photo.url(:small) %>
+</div>
+<div class="info_dialog_text">
+	<p>Name: <%= @female_profile.first_name %> <%= @male_profile.last_name%></p>	
+	<p>Birthday: <%= @female_profile.birth_date %></p>
+	<p>About: <%= @female_profile.about_me%> </p>
+	<p>Hair: <%= @female_profile.hair_color%></p>
+	<p>Eyes: <%= @female_profile.eye_color%></p>
+	<p>Height: <%= @female_profile.height%></p>
+</div>
+</div>
 
-		</div>
-		</div>
-	</div>
 
-	<div id="featured_female_profile" class="featured_image right">
-		<div id = "female_profile_picture" class="left">
-		<%= image_tag @female_profile.profile_images[0].photo.url%>
-
-		</div>
-		<div class="button_holder left">
-
-		</div>
-	</div>
-	-->
 		<div style="display:none">
 		
-		<div id="info_dialog">
+		<div id="male_info_dialog">
 		<div class="info_dialog_photo">
 			<%= image_tag @male_profile.profile_images[0].photo.url(:small) %>
 		</div>
