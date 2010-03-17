@@ -11,6 +11,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :dater_profiles
   
+  map.resources :messages, :collection => { :delete_selected => :post }
+  map.new_payment "new_payment", :controller =>"payments", :action=>"create"
+  
+  
   map.root :controller => "user_sessions", :action => "home" # optional, this just sets the root route
   
   map.connect ':controller/:action/:id'

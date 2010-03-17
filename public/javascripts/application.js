@@ -6,10 +6,36 @@
 $(document).ready(function() {
 	
 	
-	$('a#inline_fancybox').fancybox({
-		'scrolling' : 'no',
-		'titleShow' : 'false',
-		'hideOnOverlayClick' : 'false'
+	$("#login_header").fancybox({
+		'scrolling'		: 'no',
+		'titleShow'		: false,
+		'onClosed'		: function() {
+		    $("#login_error").hide();
+		}
+	});
+	
+	
+	$("#login_form").bind("submit", function() {
+
+		if ($("#login_name").val().length < 1 || $("#login_pass").val().length < 1) {
+		    $("#login_error").show();
+		    $.fancybox.resize();
+		    return false;
+		}
+
+		$.fancybox.showActivity();
+
+		$.ajax({
+			type		: "POST",
+			cache	: false,
+			url		: "/data/login.php",
+			data		: $(this).serializeArray(),
+			success: function(data) {
+				$.fancybox(data);
+			}
+		});
+
+		return false;
 	});
 	
 	$('#female_icon').click(function(){$('#male_photo_holder').hide(); $('#female_photo_holder').fadeIn();})

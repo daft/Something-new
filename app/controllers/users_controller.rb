@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user_session = UserSession.new
   end
   
   
@@ -28,5 +29,7 @@ class UsersController < ApplicationController
       render :action => 'edit'
     end
   end
+  
+  
 
 end

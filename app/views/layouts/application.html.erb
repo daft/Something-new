@@ -26,7 +26,7 @@
 	  <div id="lineTop" ></div>
 	  <div class="center">
 	    <div id="logoContainer"><a href="index.html"></a></div>
-	       <div id="navigationContainer">
+	    <div id="navigationContainer">
 		<div class="hr1"><hr /></div>
 	      <!--menu-->
 
@@ -37,9 +37,10 @@
 	          	 	
 			  <% if !current_user %>
 				  <li><%= link_to "Register", new_account_path %> </li> 
-				  <li><%= link_to "Log In", new_user_session_path %> </li>
+				  <li> <a href='#login_form' id="login_header"> Log In </a> </li>
 				<% else %>
 				  <li><%= link_to "My Account", account_path %> </li>
+				  <li><%= link_to "My Messages", messages_path %> </li>
 				  <li><%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %></li>
 				<% end %>
 	          	<li><a href="services.html">Help</a>
@@ -59,7 +60,28 @@
 		<p style="color: green"><%= flash[:notice] %></p>
 
 		<%= yield %>
+		
+		<div style="display:none" >
+
+			<div id="login_form">
+			<% form_for UserSession.new, :url => user_session_path do |f| %>
+			  <%= f.error_messages %>
+			  <%= f.label :username %><br />
+			  <%= f.text_field :username %><br />
+			  <br />
+			  <%= f.label :password %><br />
+			  <%= f.password_field :password %><br />
+			  <br />
+			  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+			  <br />
+			  <%= f.submit "Login" %>
+			<% end %>
+			</div>
+		
+	  </div>
+	</div>
 		<div id="footer">
+		
 		    <div class="center">
 		      <p>This site is the property of OneDateDaily</p>
 		      <div id="footerMenu">
@@ -71,8 +93,8 @@
 		        </ul>
 		      </div>
 		    </div>
-		  </div>
-	
-		</body>
+		  
+	</div>
+	</body>
 		</html>
 

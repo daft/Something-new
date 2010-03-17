@@ -1,0 +1,27 @@
+<% payment_service_for @user.email, PAYPAL_ACCOUNT,
+        :amount => "1.00", :currency => 'USD',
+        :service => :paypal do |service| 
+
+    service.customer :first_name => "John",
+        :last_name => "Doe",
+        :phone => '18009998888',
+        :email => @user.email
+    #service.billing_address :city => @enrollment.student.city,
+     #   :address1 => @enrollment.student.street,
+     #   :state => @enrollment.student.state,
+     #   :country => 'USA',
+      #  :zip => @enrollment.student.zip
+    service.item_name "#{@user.email} Deposit"
+    service.invoice rand(10000)
+    service.tax '0.00'
+
+    service.notify_url url_for(:only_path => false, :action => 'notify')
+    service.return_url url_for(:only_path => false,
+        :controller => 'accounts', :action => 'show')
+    service.cancel_return_url url_for(:only_path => false,
+        :controller => 'accounts', :action => 'show') %>
+
+    <!-- display payment summary here -->
+
+    <%= submit_tag 'Make Payment' %>
+<% end %>

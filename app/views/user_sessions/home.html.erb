@@ -100,7 +100,7 @@ div.wrapper
 	<%= image_tag @female_profile.profile_images[0].photo.url(:small) %>
 </div>
 <div class="info_dialog_text">
-	<p>Name: <%= @female_profile.first_name %> <%= @male_profile.last_name%></p>	
+	<p>Name: <%= @female_profile.first_name %> <%= @female_profile.last_name%></p>	
 	<p>Birthday: <%= @female_profile.birth_date %></p>
 	<p>About: <%= @female_profile.about_me%> </p>
 	<p>Hair: <%= @female_profile.hair_color%></p>
@@ -126,8 +126,22 @@ div.wrapper
 		</div>
 		</div>
 
+
 	<script>
+	
 	$(document).ready(function() {
+		
+		$('a#inline_fancybox').fancybox({
+			'scrolling' : 'no',
+			'titleShow' : 'false',
+			'hideOnOverlayClick' : 'false',
+			'overlayOpacity': '0.5',
+		
+			
+		});
+		
+		
+		
 	    var twurl = 'http://search.twitter.com/search.json';
 	    $.ajaxSetup({ cache: true });
 	    $.getJSON(
