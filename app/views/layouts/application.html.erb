@@ -33,8 +33,11 @@
 	      <div id="menu">
 	        <ul class="sf-menu">
 	          <li class="selected"> <%= link_to "Home", root_path %> </li>				
-		         <li><%= link_to "Add Yourself!", new_dater_profile_path %></li>
-	          	 	
+		       
+					<% if !current_user || (current_user && !current_user.dater_profile)%>
+				<li><%= link_to "Add Yourself!", new_dater_profile_path %></li>
+	          		<% end %>
+					
 			  <% if !current_user %>
 				  <li><%= link_to "Register", new_account_path %> </li> 
 				  <li> <a href='#login_form' id="login_header"> Log In </a> </li>

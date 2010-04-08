@@ -28792,3 +28792,1099 @@ Rendering user_sessions/home
   [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-03-16 05:06:24', `last_request_at` = '2010-03-16 05:06:24' WHERE `id` = 1[0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
 Completed in 61ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (18.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 08:29:09) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (44.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.5ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (19.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (1.6ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+Completed in 418ms (View: 182, DB: 88) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 08:29:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.4ms)
+Completed in 109ms (View: 46, DB: 1) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 08:29:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-07 08:29:27) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"pete", "password"=>"[FILTERED]", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'pete') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 209ms (View: 33, DB: 2) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 08:29:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-04-07 08:29:33) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"username"=>"david", "password"=>"[FILTERED]", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.username) = 'david') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `login_count` = 10, `last_login_at` = '2010-03-16 04:35:23', `updated_at` = '2010-04-07 12:29:34', `last_request_at` = '2010-04-07 12:29:34', `current_login_at` = '2010-04-07 12:29:34' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 46ms (DB: 3) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 08:29:34) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.4ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 12:29:34', `last_request_at` = '2010-04-07 12:29:34' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 124ms (View: 99, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-04-07 08:29:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 12:29:36', `last_request_at` = '2010-04-07 12:29:36' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;35;1mMessage Columns (6.9ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) [0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) ORDER BY messages.created_at DESC[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered messages/_inbox (20.3ms)
+Completed in 69ms (View: 39, DB: 10) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 08:29:43) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 08:29:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 12:29:47', `last_request_at` = '2010-04-07 12:29:47' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Completed in 158ms (View: 61, DB: 6) | 200 OK [http://localhost/dater_profiles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 08:30:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 12:30:39', `last_request_at` = '2010-04-07 12:30:39' WHERE `id` = 1[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Columns (4.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Columns (6.9ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Completed in 104ms (View: 55, DB: 21) | 200 OK [http://localhost/dater_profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 08:30:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 12:30:39', `last_request_at` = '2010-04-07 12:30:39' WHERE `id` = 1[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Columns (4.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Columns (14.4ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Completed in 178ms (View: 117, DB: 33) | 200 OK [http://localhost/dater_profiles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 18:34:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:34:49', `last_request_at` = '2010-04-07 22:34:49' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Completed in 79ms (View: 46, DB: 5) | 200 OK [http://localhost/dater_profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:35:21) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:35:21', `last_request_at` = '2010-04-07 22:35:21' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 126ms (View: 103, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 18:35:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:35:24', `last_request_at` = '2010-04-07 22:35:24' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Completed in 79ms (View: 45, DB: 5) | 200 OK [http://localhost/dater_profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:35:31) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:35:31', `last_request_at` = '2010-04-07 22:35:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 123ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-04-07 18:36:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:36:04', `last_request_at` = '2010-04-07 22:36:04' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;35;1mMessage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) [0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) ORDER BY messages.created_at DESC[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered messages/_inbox (6.5ms)
+Completed in 42ms (View: 18, DB: 4) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-04-07 18:36:10) [GET]
+  Parameters: {"action"=>"show", "controller"=>"static_pages", "page"=>"contact_us"}
+Rendering template within layouts/application
+Rendering static_pages/contact_us
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:36:10', `last_request_at` = '2010-04-07 22:36:10' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 103ms (View: 98, DB: 3) | 200 OK [http://localhost/contact_us]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-04-07 18:36:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"static_pages", "page"=>"contact_us"}
+Rendering template within layouts/application
+Rendering static_pages/contact_us
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:36:44', `last_request_at` = '2010-04-07 22:36:44' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 35ms (View: 32, DB: 2) | 200 OK [http://localhost/contact_us]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticPagesController#show (for 127.0.0.1 at 2010-04-07 18:36:44) [GET]
+  Parameters: {"action"=>"show", "controller"=>"static_pages", "page"=>"contact_us"}
+Rendering template within layouts/application
+Rendering static_pages/contact_us
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:36:44', `last_request_at` = '2010-04-07 22:36:44' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 35ms (View: 30, DB: 3) | 200 OK [http://localhost/contact_us]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 18:36:47) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 18:36:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:36:51', `last_request_at` = '2010-04-07 22:36:51' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Completed in 83ms (View: 50, DB: 5) | 200 OK [http://localhost/dater_profiles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 18:38:59) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 18:39:57) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-04-07 18:40:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:40:33', `last_request_at` = '2010-04-07 22:40:33' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;35;1mMessage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) [0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) ORDER BY messages.created_at DESC[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered messages/_inbox (6.9ms)
+Completed in 108ms (View: 84, DB: 4) | 200 OK [http://localhost/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:43:26) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.6ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.8ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:43:26', `last_request_at` = '2010-04-07 22:43:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 67ms (View: 39, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 18:43:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:45:36) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:45:36', `last_request_at` = '2010-04-07 22:45:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 120ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-04-07 18:46:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:46:05', `last_request_at` = '2010-04-07 22:46:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;36;1mMessage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) [0m
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.recipient_id = 1 AND (messages.recipient_deleted = 0)) ORDER BY messages.created_at DESC[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered messages/_inbox (5.9ms)
+Completed in 40ms (View: 17, DB: 4) | 200 OK [http://localhost/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 18:46:08) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, edit, new, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-04-07 18:47:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:47:00', `last_request_at` = '2010-04-07 22:47:00' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered users/_form (3.4ms)
+Completed in 43ms (View: 20, DB: 2) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:49:08) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:49:08', `last_request_at` = '2010-04-07 22:49:08' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 61ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 18:49:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:49:34', `last_request_at` = '2010-04-07 22:49:34' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+Rendering template within layouts/application
+Rendering dater_profiles/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Completed in 136ms (View: 46, DB: 5) | 200 OK [http://localhost/dater_profiles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#create (for 127.0.0.1 at 2010-04-07 18:50:00) [POST]
+  Parameters: {"commit"=>"Create Daterprofile", "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"dater_profiles", "dater_profile"=>{"profile_images_attributes"=>{"0"=>{"caption"=>""}, "1"=>{"caption"=>""}, "2"=>{"caption"=>""}, "3"=>{"caption"=>""}, "4"=>{"caption"=>""}}, "birth_date(1i)"=>"", "twitter"=>"", "birth_date(2i)"=>"", "weight"=>"", "birth_date(3i)"=>"", "about_me"=>"", "eye_color"=>"", "myspace_url"=>"", "facebook_url"=>"", "sex"=>"", "hair_color"=>"", "listed"=>"0", "height"=>"", "first_name"=>"", "user_id"=>"1", "age"=>"", "last_name"=>"", "profile_of_the_day"=>"0"}}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:50:00', `last_request_at` = '2010-04-07 22:50:00' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDaterProfile Create (0.2ms)[0m   [0mINSERT INTO `dater_profiles` (`twitter`, `updated_at`, `weight`, `myspace_url`, `eye_color`, `about_me`, `facebook_url`, `hair_color`, `sex`, `height`, `birth_date`, `listed`, `first_name`, `user_id`, `last_name`, `age`, `profile_of_the_day`, `created_at`) VALUES('', '2010-04-07 22:50:00', '', '', '', '', '', '', '', '', NULL, 0, '', 1, '', NULL, 0, '2010-04-07 22:50:00')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 32ms (DB: 4) | 302 Found [http://localhost/dater_profiles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:50:00) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:50:00', `last_request_at` = '2010-04-07 22:50:00' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Completed in 124ms (View: 100, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:54:13) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:54:13', `last_request_at` = '2010-04-07 22:54:13' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.user_id = 1) LIMIT 1[0m
+Completed in 67ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-04-07 18:54:19) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:54:19', `last_request_at` = '2010-04-07 22:54:19' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 83ms (DB: 3) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:54:20) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.dater_profile) on line #36 of app/views/layouts/application.html.erb:
+33: 	      <div id="menu">
+34: 	        <ul class="sf-menu">
+35: 	          <li class="selected"> <%= link_to "Home", root_path %> </li>				
+36: 		       <% if !current_user.dater_profile%>
+37: 				<li><%= link_to "Add Yourself!", new_dater_profile_path %></li>
+38: 	          	<% end %> 	
+39: 			  <% if !current_user %>
+
+    app/views/layouts/application.html.erb:36
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:55:17) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+Completed in 58ms (View: 35, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:56:07) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+Completed in 58ms (View: 35, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:56:07) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+Completed in 51ms (View: 28, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaterProfilesController#new (for 127.0.0.1 at 2010-04-07 18:56:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"dater_profiles"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/dater_profiles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-04-07 18:56:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 18:56:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/account/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 18:56:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.9ms)
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/account/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 18:56:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 30ms (View: 15, DB: 2) | 200 OK [http://localhost/account/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:57:02) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.5ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+Completed in 107ms (View: 84, DB: 6) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 18:57:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-04-07 18:58:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.0ms)
+Completed in 38ms (View: 23, DB: 1) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-07 18:58:10) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"daft", "password"=>"[FILTERED]", "email"=>"daft@dgat"}, "commit"=>"Register", "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"users"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'daft@dgat') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'daft') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'a1eed51cd7c61ba96acaed18569b1f5ea3e02701dcc42cc7020ba45d208a325be741deb9e8c017bba4d7502edb9341fd48f750a9eaabec0f85b9eb6f5b2bbf22') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.2ms)
+Completed in 107ms (View: 22, DB: 3) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-07 18:58:19) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"daft", "password"=>"[FILTERED]", "email"=>"daft@dgat.dijfj"}, "commit"=>"Register", "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'daft@dgat.dijfj') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'daft') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '758f8e0bd2aa7945fc31416d40afbb2f57615f430132b3ebb71042818676d2ea0f8eb48027768c27792c28ac63dd6f91d72442abbba013d0b117d48faf0202a0') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.3ms)
+Completed in 41ms (View: 21, DB: 2) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-04-07 18:58:25) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"daft", "password"=>"[FILTERED]", "email"=>"daft@dgat.com"}, "commit"=>"Register", "action"=>"create", "authenticity_token"=>"R3CSCwoCEy9A0FpQ3v/1iL6trSd9NiIoyzsFtTCHR+U=", "controller"=>"users"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'daft@dgat.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`username`) = BINARY 'daft') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`last_login_at`, `updated_at`, `last_request_at`, `crypted_password`, `current_login_ip`, `username`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `created_at`, `email`, `last_login_ip`) VALUES(NULL, '2010-04-07 22:58:25', '2010-04-07 22:58:25', '2e8c966f7c7470d5c87faad5d65cef04070fdf3e7c63db6c8e0dcf972b1bdbf8d18f986d964789852d2825fa0209e128ded18809605366e884f4284f6f0a2f47', '127.0.0.1', 'daft', 'uOcI2Xa8sKgEsseKC9ne', '2010-04-07 22:58:25', '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63', 1, '2010-04-07 22:58:25', 'daft@dgat.com', NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 24ms (DB: 3) | 302 Found [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:58:25) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:58:25', `last_request_at` = '2010-04-07 22:58:25' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.user_id = 2) LIMIT 1[0m
+Completed in 122ms (View: 37, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:59:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 22:59:32', `last_request_at` = '2010-04-07 22:59:32' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 65ms (View: 41, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 18:59:33) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.7ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.4ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.5ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 22:59:33', `last_request_at` = '2010-04-07 22:59:33' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Completed in 134ms (View: 44, DB: 10) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:01:13) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.5ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 23:01:13', `last_request_at` = '2010-04-07 23:01:13' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.user_id = 2) LIMIT 1[0m
+Completed in 68ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:01:15) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 23:01:15', `last_request_at` = '2010-04-07 23:01:15' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.user_id = 2) LIMIT 1[0m
+Completed in 62ms (View: 36, DB: 8) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:01:31) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.6ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-04-07 23:01:31', `last_request_at` = '2010-04-07 23:01:31' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 125ms (View: 46, DB: 8) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:01:43) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;36;1mProfileImage Load (0.3ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-04-07 23:01:43', `last_request_at` = '2010-04-07 23:01:43' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.user_id = 2) LIMIT 1[0m
+Completed in 65ms (View: 42, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:04:39) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.3ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;35;1mDaterProfile Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;35;1mProfileImage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `profile_images`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.profile_images) on line #35 of app/views/user_sessions/home.html.erb:
+32: 			<div id="female_photo_holder" style="display:none">
+33: 				<a id="inline_fancybox" href="#female_info_dialog">
+34: 				
+35: 				<div class="fadeHolder"> <%= image_tag @female_profile.profile_images[0].photo.url(:large), :id=>"female_profile_image" %> </div>
+36: 			 	
+37: 				</a>
+38: 			</div>
+
+    app/views/user_sessions/home.html.erb:35
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:07:31) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;35;1mDaterProfile Load (0.4ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.2ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.profile_images) on line #27 of app/views/user_sessions/home.html.erb:
+24: 			<div id="male_photo_holder">
+25:      		<a id="inline_fancybox" href="#male_info_dialog">
+26: 			
+27: 			<div class="fadeHolder"> <%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %> </div>
+28:  
+29: 			</a>
+30: 			</div>
+
+    app/views/user_sessions/home.html.erb:27
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:08:45) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 57ms (View: 34, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-07 19:08:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancybox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#home (for 127.0.0.1 at 2010-04-07 19:09:49) [GET]
+  Parameters: {"action"=>"home", "controller"=>"user_sessions"}
+  [4;36;1mDaterProfile Load (0.4ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='M') LIMIT 1[0m
+  [4;35;1mDaterProfile Load (0.2ms)[0m   [0mSELECT * FROM `dater_profiles` WHERE (profile_of_the_day AND sex='F') LIMIT 1[0m
+  [4;36;1mDaterProfile Load (0.3ms)[0m   [0;1mSELECT * FROM `dater_profiles` WHERE (`dater_profiles`.`listed` = 1) ORDER BY updated_at DESC LIMIT 4[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/home
+  [4;36;1mDaterProfile Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `dater_profiles`[0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 8) [0m
+  [4;36;1mProfileImage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `profile_images`[0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 3) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 7) [0m
+  [4;35;1mProfileImage Load (0.3ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 6) [0m
+  [4;36;1mProfileImage Load (0.2ms)[0m   [0;1mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 5) [0m
+  [4;35;1mProfileImage Load (0.2ms)[0m   [0mSELECT * FROM `profile_images` WHERE (`profile_images`.dater_profile_id = 4) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '5bd77936640d38f4f565f6ac5f3c7d76beae7d878650a20373d61cf204903edb044c2e2f2e3aea726ae59b7c742a878afef6e14df5082635530a75724c46af63') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+Completed in 55ms (View: 32, DB: 7) | 200 OK [http://localhost/]

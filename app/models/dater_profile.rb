@@ -2,7 +2,9 @@ class DaterProfile < ActiveRecord::Base
   has_many :profile_images, :dependent => :destroy
   accepts_nested_attributes_for :profile_images, :reject_if => proc { |t| t['photo'].blank?  || t['caption'].blank? }
   belongs_to :user
+  #before_save :check_existing
   MOST_RECENT_DATER_ENTRIES = 4
+
 
   def self.get_male_featured_profile
     DaterProfile.male_profile_of_the_day
