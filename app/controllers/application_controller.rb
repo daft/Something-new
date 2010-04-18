@@ -10,19 +10,10 @@ class ApplicationController < ActionController::Base
   
   filter_parameter_logging :password
 
-  helper_method :current_user, :featured_profile
+  helper_method :current_user
 
   private
 
-  def male_featured_profile
-    return @male_featured_profile if defined?(@male_featured_profile)
-    @male_featured_profile = DaterProfile.get_male_featured_profile
-  end
-  
-  def female_featured_profile
-    return @female_featured_profile if defined?(@female_featured_profile)
-    @female_featured_profile = DaterProfile.get_female_featured_profile
-  end
   
 
   def current_user_session

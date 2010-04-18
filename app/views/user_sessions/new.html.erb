@@ -1,6 +1,15 @@
 
+<script>
+ jQuery.noConflict();
+
+</script>
+<%= javascript_include_tag 'prototype'%>
+<%= fb_connect_javascript_tag %>
+<%= init_fb_connect "XFBML" %>
+
 <h1>Login</h1>
- 
+<%= authlogic_facebook_login_button %>
+
 <% form_for @user_session, :url => user_session_path do |f| %>
   <%= f.error_messages %>
   <%= f.label :username %><br />

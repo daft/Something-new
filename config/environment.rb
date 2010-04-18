@@ -32,6 +32,7 @@ Rails::Initializer.run do |config|
   config.gem "formtastic"
   #config.gem "activemerchant", :lib=>"active_merchant"
   config.gem "money"
+  config.gem "facebooker"
   
   
  
@@ -62,3 +63,13 @@ Rails::Initializer.run do |config|
   end
   
 end
+
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+   :address => "smtp.tutorialspoint.com",
+   :port => 25,
+   :domain => "tutorialspoint.com",
+   :authentication => :login,
+   :user_name => "username",
+   :password => "password",
+}

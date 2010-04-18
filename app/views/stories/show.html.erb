@@ -1,0 +1,72 @@
+<div id="contentContainer">
+  <!--content-->
+  <div id="content">
+   	<div id="story"> 
+
+	<% @pgs.each do |pg|%>
+		<%= pg.p_text %>
+		<br/>
+	<% end %>	
+	</div>	
+	<hr>
+	<div id="new_paragraph_container">
+		<% form_for @pg do |form|%>
+			<%= form.text_area :p_text %>
+			<%= form.hidden_field :story_id, :value=>@story.id%>
+			<%= submit_tag "Add to the Story!" %>
+		<% end %>
+	</div>
+
+  </div>
+  <!--Sidebar-->
+  <div id="sidebar">
+    <div class="sidebarBox">
+      
+      <div class="sidebarTitile">
+        <h2>Email a Friend!</h2>
+      </div>
+      <div class="sidebarMenu"> 
+		<div id="new_paragraph_container">
+	
+			<% form_for :user_mailer, :url => { :controller => 'stories', :action => 'deliver' } do |f| %>
+			    <%= f.label :sender %><br />
+			    <%= f.text_field :sender, :size => 20 %><br />
+				<%= f.label :recipient %><br />
+			    <%= f.text_field :recipient, :size => 20 %><br />
+			    <%= f.hidden_field :story_id, :value=>@story.id%>
+			    <%= submit_tag "Send Email "%>
+			<% end %>
+		</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+	<h4> <%= @story.title %></h4>
+	
+	
+	<br/>
+	
+	<hr>
+	
+	
+
+
+<script>
+$(document).ready(function() 
+{
+	$("#story").css("background-color", "<%=@story.bg_color%>");
+	 
+      $('#new_paragraph').submit(function (){  
+        $.post($(this).attr('action'), $(this).serialize(), null, "script");  
+        return false;  
+      });  
+	
+	
+
+  
+	
+});
+</script>

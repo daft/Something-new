@@ -1,0 +1,25 @@
+<div id="contentContainer">
+  <!--content-->
+  <div id="content">
+	<% semantic_form_for @story do |form|%>
+		<%= form.inputs :title%>
+		<fieldset>
+		<ol>
+		<li id="story_bg_color_input" class="string_required">
+		 <%= form.label :bg_color%> <%= form.text_field :bg_color, :value=>"#123456" %>
+		<div id="colorpicker"></div><br />
+		</li>
+		</ol>
+		</fieldset>
+		<%= form.buttons %>
+	<% end %>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function() 
+{
+$('#colorpicker').farbtastic('#story_bg_color');
+});
+</script>

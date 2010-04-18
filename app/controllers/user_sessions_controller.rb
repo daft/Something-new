@@ -7,14 +7,12 @@ class UserSessionsController < ApplicationController
     end
     
     def home
-       @male_profile = male_featured_profile
-       @female_profile = female_featured_profile
-       @recent_daters = DaterProfile.most_recent_daters
        @user_session = UserSession.new
     end
 
     def create
       @user_session = UserSession.new(params[:user_session])
+      @user_session.crypted_password = "vlashlkjdhfkjhf"
       if @user_session.save
         flash[:notice] = "Login successful!"
         redirect_to root_url

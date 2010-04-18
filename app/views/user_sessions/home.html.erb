@@ -18,13 +18,13 @@ div.wrapper
 
 
   <div id="header" >
-	 <%= image_tag 'male-icon.png', :id=>"male_icon", :size=>"20x20" %> | <%= image_tag 'female-icon.png', :id=>"female_icon",  :size=>"20x20" %> 
+
     <div class="wrapper">	
 	<div class="fadeWrapper">
 			<div id="male_photo_holder">
      		<a id="inline_fancybox" href="#male_info_dialog">
 			
-			<div class="fadeHolder"> <%= image_tag @male_profile.profile_images[0].photo.url(:large), :id=>"male_profile_image" %> </div>
+			<div class="fadeHolder"> </div>
  
 			</a>
 			</div>
@@ -32,7 +32,7 @@ div.wrapper
 			<div id="female_photo_holder" style="display:none">
 				<a id="inline_fancybox" href="#female_info_dialog">
 				
-				<div class="fadeHolder"> <%= image_tag @female_profile.profile_images[0].photo.url(:large), :id=>"female_profile_image" %> </div>
+				<div class="fadeHolder">  </div>
 			 	
 				</a>
 			</div>
@@ -47,13 +47,13 @@ div.wrapper
 		
 		<div class="featuredTitleContainer"><div class="hr1"><hr /></div>About Us<div class="hr2"><hr /></div></div>
       <br/>
-      <p>  ODD is the simplest dating site out here.  Each day we display a profile of ONE member of each sex. There will be some pictures, a little info, and maybe a blurb.  
+      <p>  Epic stories, one paragraph at a time.  
       <br /><br/>
 
 
 	  <div class="featuredTitleContainer"><div class="hr1"><hr /></div>How it works<div class="hr2"><hr /></div></div>
       <br/>
-	  If you like our dater of the day, click the email button, and you will be able to send them an email.  We do believe in the privacy and our Creeper Protection Department has developed a system whereby each dater is assigned an anonymous email.  When we receive email at that address, we will forward it on to our date-of-the-day for exactly one week.  After that, you blew it or s/he doesn't like the sound of you.  Don't worry though, there will be another willing dater tomorrow, and the next day.   </p>
+	 Epic stories is a site that seeks to empower the casual paragraph writer to create a story.  How you ask?  Well, a user need only a brain to start writing a story (no zombie brains allowed).  On our aptly named "write a story page", enter one paragraph and choose a color.  Once you are done with your paragraph feel free to add another paragraph or, wait for one of your friends to come write one.   </p>
 	<br/>
       <div class="servicesBoxs">
 
@@ -71,14 +71,6 @@ div.wrapper
           <h2> Recent Daters </h2>
         </div>
         <div class="sidebarMenu" id="sidebarRecent">
-		  <% @recent_daters.each do |dater|%>
-		  <div class="recent_photo"><%= image_tag dater.profile_images[0].photo.url(:small) %></div>
-          <h4><a href="#"><%= dater.first_name%> <%= dater.last_name%></a></h4>
-          <span class="info"><a href="#"> <%= dater.updated_at.strftime('%d %b %Y') %> </a></span>
-          <div class="bubble"></div>
-          <span class="info"><a href="#">12 Comments </a></span>
-          <hr />
-		 <% end %>
         </div>
         <div class="sidebarTitile">
           <h2>Buzz</h2>
@@ -90,55 +82,19 @@ div.wrapper
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div style="display:none">
-
-<div id="female_info_dialog">
-<div class="info_dialog_photo">
-	<%= image_tag @female_profile.profile_images[0].photo.url(:small) %>
-</div>
-<div class="info_dialog_text">
-	<p>Name: <%= @female_profile.first_name %> <%= @female_profile.last_name%></p>	
-	<p>Birthday: <%= @female_profile.birth_date %></p>
-	<p>About: <%= @female_profile.about_me%> </p>
-	<p>Hair: <%= @female_profile.hair_color%></p>
-	<p>Eyes: <%= @female_profile.eye_color%></p>
-	<p>Height: <%= @female_profile.height%></p>
-</div>
-</div>
 
 
-		<div style="display:none">
-		
-		<div id="male_info_dialog">
-		<div class="info_dialog_photo">
-			<%= image_tag @male_profile.profile_images[0].photo.url(:small) %>
-		</div>
-		<div class="info_dialog_text">
-			<p>Name: <%= @male_profile.first_name %> <%= @male_profile.last_name%></p>	
-			<p>Birthday: <%= @male_profile.birth_date %></p>
-			<p>About: <%= @male_profile.about_me%> </p>
-			<p>Hair: <%= @male_profile.hair_color%></p>
-			<p>Eyes: <%= @male_profile.eye_color%></p>
-			<p>Height: <%= @male_profile.height%></p>
-		</div>
-		</div>
+
+
+
+
 
 
 	<script>
 	
 	$(document).ready(function() {
 		
-		$('a#inline_fancybox').fancybox({
-			'scrolling' : 'no',
-			'titleShow' : 'false',
-			'hideOnOverlayClick' : 'false',
-			'overlayOpacity': '0.5',
-		
-			
-		});
+
 		
 		
 		
